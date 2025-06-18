@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
-  speed: 10
+  lastFire: 0
+  tzav: {fileID: 5742941817682544595, guid: 537acbe180977b2439d2660bb286cfb3, type: 3}
 --- !u!61 &5961280175709111190
 BoxCollider2D:
   m_ObjectHideFlags: 0

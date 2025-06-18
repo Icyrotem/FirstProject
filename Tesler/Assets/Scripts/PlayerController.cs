@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
     public const int speed = 10;
-    public const float fireRate = 0.5F;
+    public const float fireRate = 20f;
     public float lastFire;
     public GameObject tzav;
 
