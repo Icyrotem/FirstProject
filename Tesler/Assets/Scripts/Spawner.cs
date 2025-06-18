@@ -8,10 +8,12 @@ public class Spawner : MonoBehaviour
     public GameObject enemy;
     public int level = 1;
     public float random;
+    public int doscount;
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < level+5; i++)
+        doscount = level + 100;
+        for (int i = 0; i < doscount; i++)
         {
             random = Random.Range(-22.0f, 22.0f);
             Instantiate(enemy, new Vector3(random, -6.5f, 0), Quaternion.identity);
