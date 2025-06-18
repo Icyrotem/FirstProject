@@ -25,8 +25,11 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S) && (Time.time - lastFire > 1 / fireRate))
         {
-             lastFire = Time.time;
-             Instantiate(tzav, transform.position, new Quaternion(0, 0, -90, 0));
+            lastFire = Time.time;
+
+            GameObject clone;
+            clone = Instantiate(tzav, this.transform.position, new Quaternion());
+            clone.transform.Rotate(0, 0, -90 + 90 * horizontalInput);
         }
     }
 }
