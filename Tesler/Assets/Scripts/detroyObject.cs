@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class detroyObject : MonoBehaviour
 {
+    public Spawner spawner;
     public float timeOut;
     public float timeLeft;
     Quaternion target;
@@ -41,7 +42,8 @@ public class detroyObject : MonoBehaviour
         if (collision.CompareTag("dos"))
         {
             Destroy(this.gameObject);
-            Debug.Log("dwa");
+            Destroy(collision.gameObject);
+            Debug.Log(spawner.doscount);
         }
     }
 }
