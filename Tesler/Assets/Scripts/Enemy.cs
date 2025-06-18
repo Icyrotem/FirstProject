@@ -3,17 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Enemy : MonoBehaviour
 {
+    public float xRange = 21;
     public int speed = 10;
-    public BoxCollider2D wall1;
-    public BoxCollider2D wall2;
-    public BoxCollider2D enemycollider;
     // Start is called before the first frame update
     void Start()
     {
-        wall1 = GetComponent<BoxCollider2D>();
-        wall2 = GetComponent<BoxCollider2D>();
-        enemycollider = GetComponent<BoxCollider2D>();
-
 
     }
 
@@ -21,10 +15,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.right * Time.deltaTime * speed);
+        if(transform.position.x >= xRange || transform.position.x <= -xRange)
+        {
+            speed *= -1;
+        }
 
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        transform.Translate(Vector3.right * Time.deltaTime * -speed);
     }
 }
