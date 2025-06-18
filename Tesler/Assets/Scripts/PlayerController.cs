@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
-    public int speed;
-    public int fireRate;
+    public const int speed = 10;
+    public const float fireRate = 0.5F;
     public float lastFire;
     public GameObject tzav;
 
@@ -23,9 +23,10 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && (Time.time - lastFire > 1 / fireRate))
         {
-            Instantiate(tzav, transform.position, new Quaternion(0, 0, -90, 0));
+             lastFire = Time.time;
+             Instantiate(tzav, transform.position, new Quaternion(0, 0, -90, 0));
         }
     }
 }
