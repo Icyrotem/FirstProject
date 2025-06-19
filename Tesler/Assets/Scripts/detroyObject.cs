@@ -31,7 +31,7 @@ public class detroyObject : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, target, 1 * Time.deltaTime);
 
         timeLeft -= Time.deltaTime;
-        if (timeLeft <= 0)
+        if (timeLeft <= 0 || transform.position.y <= -10)
             Destroy(this.gameObject);
         
     }
