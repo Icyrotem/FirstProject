@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float horizontalInput;
+    public static float horizontalInput;
     public const int speed = 10;
-    public const float fireRate = 20f;
+    public const float fireRate = 1f;
     public float lastFire;
     public GameObject tzav;
 
