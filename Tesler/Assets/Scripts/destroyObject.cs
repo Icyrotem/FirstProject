@@ -10,7 +10,6 @@ public class detroyObject : MonoBehaviour
     Quaternion target;
     public int speed;
     public GameObject dos;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +41,7 @@ public class detroyObject : MonoBehaviour
         {
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
+            Spawner.counter--;
         }
     }
 }
