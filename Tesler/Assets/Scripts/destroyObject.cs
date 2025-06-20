@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor.SearchService;
 using UnityEngine;
 
-public class detroyObject : MonoBehaviour
+public class destroyObject : MonoBehaviour
 {
     public float timeLeft;
 
@@ -18,7 +18,15 @@ public class detroyObject : MonoBehaviour
     void Update()
     {
         timeLeft -= Time.deltaTime;
-        if (timeLeft <= 0 || transform.position.y <= -10 || Spawner.enemies.Count == 0)
+        if (timeLeft <= 0 || transform.position.y <= -10)
             Destroy(this.gameObject);
+    }
+
+    public static void destroyAllTzav()
+    {
+        GameObject[] tzavim = GameObject.FindGameObjectsWithTag("tzav");
+
+        foreach (GameObject tzav in tzavim)
+            Destroy(tzav);
     }
 }

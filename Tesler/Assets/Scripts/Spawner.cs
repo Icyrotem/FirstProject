@@ -23,12 +23,13 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(counter);
         if (enemies.Count <= 0)
         {
-            level=level + 5;
+            destroyObject.destroyAllTzav();
+
+            level = level + 5;
             newWave();
-            
+
         }
     }
 
