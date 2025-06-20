@@ -45,11 +45,4 @@ public class tzavLogic : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("floor"))
-        {
-            tzav.AddForce(new Vector2(0, 20), ForceMode2D.Impulse);
-        }
-    }
 }
