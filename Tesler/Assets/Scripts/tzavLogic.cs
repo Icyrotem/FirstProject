@@ -14,19 +14,13 @@ public class tzavLogic : MonoBehaviour
     {
         horizontal = PlayerController.horizontalInput;
         target = Quaternion.Euler(0, 0, -90);
+        tzav.velocity = new Vector2(speed * horizontal, tzav.velocity.y);
     }
 
     // Update is called once per frame
     void Update()
     {
-        speed -= (int)(14 * Time.deltaTime);
-
-        if (speed <= 0)
-            speed = 0;
-
-        tzav.velocity = new Vector2(speed * horizontal, tzav.velocity.y);
         transform.rotation = Quaternion.Slerp(transform.rotation, target, 1 * Time.deltaTime);
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
