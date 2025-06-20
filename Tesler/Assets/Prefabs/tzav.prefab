@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8650986985781320358}
   - component: {fileID: -1238433262413229201}
   - component: {fileID: 3849561627469324895}
+  - component: {fileID: 2215648547337799616}
   m_Layer: 0
   m_Name: tzav
   m_TagString: tzav
@@ -126,12 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ffa48c8fefda54fbd0b458c1842cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeOut: 0
   timeLeft: 0
-  speed: 0
-  dos: {fileID: 8895108677168689052, guid: 30b0970050193724c882b6977a02144f, type: 3}
-  tzav: {fileID: 8650986985781320358}
-  horizontal: 0
 --- !u!61 &3849561627469324895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -177,3 +173,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15271309, y: 0.17320663}
   m_EdgeRadius: 0
+--- !u!114 &2215648547337799616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5742941817682544595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70643b4f33d22c14d97fe2ec38ce08c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 14
+  dos: {fileID: 8895108677168689052, guid: 30b0970050193724c882b6977a02144f, type: 3}
+  tzav: {fileID: 8650986985781320358}
