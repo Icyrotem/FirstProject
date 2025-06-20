@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 177471248}
   m_Layer: 0
   m_Name: Wall2
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -440,7 +440,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 10.93
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -910,7 +910,7 @@ GameObject:
   - component: {fileID: 1785367669}
   m_Layer: 0
   m_Name: Wall1
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1081,7 +1081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5931631293666213926, guid: 92fb3de57b075714183bd4ea76249b33, type: 3}
       propertyPath: fireRate
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5961280175709111190, guid: 92fb3de57b075714183bd4ea76249b33, type: 3}
       propertyPath: m_Enabled
