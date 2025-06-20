@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class detroyObject : MonoBehaviour
 {
-    public float timeLeft = 5;
+    public float timeLeft;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        timeLeft = 5;
     }
 
     // Update is called once per frame
