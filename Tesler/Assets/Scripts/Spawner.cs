@@ -39,6 +39,7 @@ public class Spawner : MonoBehaviour
             random = Random.Range(-22.0f, 22.0f);
             enemies.Add(Instantiate(enemy, new Vector3(random, -6.5f, 0), Quaternion.identity));
         }
+        PlayerController.ammo = (int)(enemies.Count * 1.5);
     }
 
 }

@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float fireRate;
     public float lastFire;
     public GameObject tzav;
+    public static int ammo;
 
     // Start is called before the first frame update
     void Start()
@@ -23,13 +24,14 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
 
-        if (Input.GetKey(KeyCode.S) && (Time.time - lastFire > 1 / fireRate))
+        if (Input.GetKey(KeyCode.S) && (Time.time - lastFire > 1 / fireRate) && (ammo > 0))
         {
             lastFire = Time.time;
 
             GameObject clone;
             clone = Instantiate(tzav, this.transform.position, new Quaternion());
             clone.transform.Rotate(0, 0, -90 + 90 * horizontalInput);
+            ammo--;
         }
     }
 }

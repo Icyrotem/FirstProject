@@ -18,7 +18,7 @@ public class detroyObject : MonoBehaviour
     void Update()
     {
         timeLeft -= Time.deltaTime;
-        if (timeLeft <= 0 || transform.position.y <= -10)
+        if (timeLeft <= 0 || transform.position.y <= -10 || Spawner.enemies.Count == 0)
             Destroy(this.gameObject);
     }
 }

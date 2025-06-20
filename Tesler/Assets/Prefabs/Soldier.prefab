@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 740de91e43d50ec42a937187e89c2930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalInput: 0
+  fireRate: 1
   lastFire: 0
   tzav: {fileID: 5742941817682544595, guid: 537acbe180977b2439d2660bb286cfb3, type: 3}
 --- !u!61 &5961280175709111190
