@@ -33,9 +33,15 @@ public class tzavLogic : MonoBehaviour
     {
         if (collision.CompareTag("dos"))
         {
+            for(int i = 0; i < Spawner.enemies.Count; i++)
+            {
+                if (Spawner.enemies[i].GetInstanceID() == collision.gameObject.GetInstanceID())
+                {
+                    Spawner.enemies.Remove(collision.gameObject);
+                    Destroy(collision.gameObject);
+                }
+            }
             Destroy(this.gameObject);
-            Destroy(collision.gameObject);
-            Spawner.counter--;
         }
     }
 

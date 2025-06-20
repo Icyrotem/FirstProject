@@ -11,7 +11,8 @@ public class Spawner : MonoBehaviour
     public GameObject enemy;
     public int level = 0;
     public float random;
-    public static int counter = 0;
+    public static List<GameObject> enemies = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,21 +23,21 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(counter);
-        if (counter <= 0)
+        //Debug.Log(counter);
+        if (enemies.Count <= 0)
         {
             level=level + 5;
             newWave();
             
         }
     }
+
     void newWave()
     {
         for (int i = 1; i < level + 5; i++)
         {
             random = Random.Range(-22.0f, 22.0f);
-            Instantiate(enemy, new Vector3(random, -6.5f, 0), Quaternion.identity);
-            counter++;
+            enemies.Add(Instantiate(enemy, new Vector3(random, -6.5f, 0), Quaternion.identity));
         }
     }
 
