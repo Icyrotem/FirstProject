@@ -8,6 +8,7 @@ TagManager:
   - tzav
   - floor
   - wall
+  - text
   layers:
   - Default
   - TransparentFX
@@ -42,7 +43,7 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Wall
+  - name: 
     uniqueID: 1755616279
     locked: 0
   - name: Default
