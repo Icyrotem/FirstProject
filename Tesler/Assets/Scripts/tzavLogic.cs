@@ -9,6 +9,7 @@ public class tzavLogic : MonoBehaviour
     public GameObject dos;
     private float horizontal;
     public Rigidbody2D tzav;
+    public ParticleSystem drafted;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +33,11 @@ public class tzavLogic : MonoBehaviour
                 if (Spawner.enemies[i].GetInstanceID() == collision.gameObject.GetInstanceID())
                 {
                     Spawner.enemies.Remove(collision.gameObject);
+                    Instantiate(drafted, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
                     Destroy(collision.gameObject);
                 }
             }
+            scoreLogic.updateText(1);
             Destroy(this.gameObject);
         }
     }

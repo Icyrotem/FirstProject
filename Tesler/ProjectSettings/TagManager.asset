@@ -9,6 +9,7 @@ TagManager:
   - floor
   - wall
   - text
+  - particleDrafted
   layers:
   - Default
   - TransparentFX

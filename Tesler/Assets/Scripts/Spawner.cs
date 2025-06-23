@@ -26,8 +26,10 @@ public class Spawner : MonoBehaviour
         if (enemies.Count <= 0)
         {
             destroyObject.destroyAllTzav();
+            paricleDestroy.destroyAllParticles();
 
             level = level + 5;
+            scoreLogic.updateText((int)(level / 2));
             newWave();
 
         }

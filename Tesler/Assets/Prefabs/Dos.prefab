@@ -157,5 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad8e51b021bde743b8f786460ab6fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drafted: {fileID: 5633719809822280480, guid: 9954d3ae27671574f805e863a23b2530, type: 3}
   xRange: 21
   speed: 10
