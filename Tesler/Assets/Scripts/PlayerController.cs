@@ -1,5 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +9,10 @@ public class PlayerController : MonoBehaviour
     public float lastFire;
     public GameObject tzav;
     public static int ammo;
+    
+    // Constants for magic numbers
+    private const float BULLET_ROTATION_OFFSET = -90f;
+    private const float BULLET_ROTATION_MULTIPLIER = 90f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
             GameObject clone;
             clone = Instantiate(tzav, this.transform.position, new Quaternion());
-            clone.transform.Rotate(0, 0, -90 + 90 * horizontalInput);
+            clone.transform.Rotate(0, 0, BULLET_ROTATION_OFFSET + BULLET_ROTATION_MULTIPLIER * horizontalInput);
             ammo--;
         }
     }

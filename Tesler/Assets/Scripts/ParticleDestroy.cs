@@ -1,16 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class paricleDestroy : MonoBehaviour
+public class ParticleDestroy : MonoBehaviour
 {
-    private float duration = 1f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    // Constants
+    private const float DEFAULT_PARTICLE_DURATION = 1f;
+    
+    private float duration = DEFAULT_PARTICLE_DURATION;
+    
     // Update is called once per frame
     void Update()
     {
