@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class tzavLogic : MonoBehaviour
@@ -10,18 +8,23 @@ public class tzavLogic : MonoBehaviour
     private float horizontal;
     public Rigidbody2D tzav;
     public ParticleSystem drafted;
+    
+    // Constants
+    private const float TARGET_ROTATION_Z = -90f;
+    private const float ROTATION_LERP_SPEED = 1f;
+    
     // Start is called before the first frame update
     void Start()
     {
         horizontal = PlayerController.horizontalInput;
-        target = Quaternion.Euler(0, 0, -90);
+        target = Quaternion.Euler(0, 0, TARGET_ROTATION_Z);
         tzav.velocity = new Vector2(speed * horizontal, tzav.velocity.y);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.Slerp(transform.rotation, target, 1 * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, target, ROTATION_LERP_SPEED * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,5 +44,4 @@ public class tzavLogic : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
 }

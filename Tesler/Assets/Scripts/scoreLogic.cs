@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -16,7 +14,8 @@ public class scoreLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.SetText("your score is 0");
+        // Update method kept for potential future use
+        // Score text is updated via updateText() method when score changes
     }
 
     public static void updateText(int add)

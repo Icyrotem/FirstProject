@@ -1,10 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics.Tracing;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.ParticleSystem;
 
 public class Spawner : MonoBehaviour
 {
@@ -26,7 +21,7 @@ public class Spawner : MonoBehaviour
         if (enemies.Count <= 0)
         {
             destroyObject.destroyAllTzav();
-            paricleDestroy.destroyAllParticles();
+            particleDestroy.destroyAllParticles();
 
             level = level + 5;
             scoreLogic.updateText((int)(level / 2));
