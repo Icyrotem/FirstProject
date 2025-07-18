@@ -1,8 +1,11 @@
 using UnityEngine;
 
-public class particleDestroy : MonoBehaviour
+public class ParticleDestroy : MonoBehaviour
 {
-    private float duration = 1f;
+    // Constants
+    private const float DEFAULT_PARTICLE_DURATION = 1f;
+    
+    private float duration = DEFAULT_PARTICLE_DURATION;
     
     // Update is called once per frame
     void Update()

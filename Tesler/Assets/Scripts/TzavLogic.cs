@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class tzavLogic : MonoBehaviour
+public class TzavLogic : MonoBehaviour
 {
     Quaternion target;
     public int speed = 14;
@@ -40,7 +40,7 @@ public class tzavLogic : MonoBehaviour
                     Destroy(collision.gameObject);
                 }
             }
-            scoreLogic.updateText(1);
+            ScoreLogic.updateText(1);
             Destroy(this.gameObject);
         }
     }
